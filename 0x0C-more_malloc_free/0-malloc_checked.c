@@ -1,20 +1,22 @@
-#include "main.h"
 #include <stdlib.h>
+#include <stdio.h>
 
 /**
- * malloc_checked -  Entry point
- *@b: unsigned int
- * Return: Always 0.
+ * malloc_checked - fuction that allocates memory and also checks if sucessful
+ * @b: size of memory to allocate.
+ *
+ * Return: pointer to memory, Else if return exit status 98.
  */
 void *malloc_checked(unsigned int b)
 {
-	void *p;
+	void *ptr;
 
-	p = malloc(b);
-	if (!p)
+	ptr = malloc(b);
+	if (ptr == NULL)
 	{
+		free(ptr);
 		exit(98);
 	}
-	return (p);
+	return (ptr);
 }
 
