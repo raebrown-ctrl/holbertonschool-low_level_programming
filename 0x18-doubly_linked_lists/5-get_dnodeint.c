@@ -1,5 +1,3 @@
-#include <stdio.h>
-#include <stdlib.h>
 #include "lists.h"
 /**
 * *get_dnodeint_at_index - that prints all the elements of a dlistint_t list
